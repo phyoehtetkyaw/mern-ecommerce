@@ -1,2 +1,2 @@
-# node-js-ecommerce
-Ecommerce Application with NodeJs
+# mern-ecommerce
+Ecommerce Application with MERN stack
