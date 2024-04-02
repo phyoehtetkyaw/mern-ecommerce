@@ -45,7 +45,7 @@ function Login() {
     const loginApi = data => {
         axios({
             method: "post",
-            url: "http://127.0.0.1:5000/api/login",
+            url: "http://127.0.0.1:5000/api/admin/login",
             data: data
         })
         .then(res => {
@@ -72,16 +72,16 @@ function Login() {
                 <form method="post" onSubmit={login}>
                     <div className="mb-5">
                         <label className="font-bold block mb-1.5">Email <span className="text-red-500">*</span></label>
-                        <input type="text" value={email} onChange={e => setEmail(e.target.value)} name="email" className="border-2 border-black w-full rounded-sm p-1" />
+                        <input type="email" value={email} onChange={e => setEmail(e.target.value)} name="email" className="border-2 border-gray-500 w-full rounded-sm p-1" />
                         { emailError !== "" && <span className="text-red-500 text-sm">{emailError}</span> }
                     </div>
                     <div className="mb-5">
                         <label className="font-bold block mb-1.5">Password <span className="text-red-500">*</span></label>
-                        <input type="password" value={password} onChange={e => setPassword(e.target.value)} name="password" className="border-2 border-black w-full rounded-sm p-1" />
+                        <input type="password" value={password} onChange={e => setPassword(e.target.value)} name="password" className="border-2 border-gray-500 w-full rounded-sm p-1" />
                         { passwordError !== "" && <span className="text-red-500 text-sm">{passwordError}</span> }
                     </div>
                     <div className="flex justify-end">
-                        <button type="submit" name="submit" className="bg-violet-800 px-5 py-1 text-white rounded-sm hover:bg-violet-500">Log In</button>
+                        <button type="submit" name="submit" className="bg-violet-800 px-6 py-1.5 text-white rounded-sm hover:bg-violet-500 font-sm">Log In</button>
                     </div>
                 </form>
             </div>
